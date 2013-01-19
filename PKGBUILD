@@ -1,4 +1,4 @@
-# Maintainer: Federico Squartini <federico.squartini@googlemail.com>
+# Maintainer: Federico Squartini <federico.squartini@gmail.com>
 
 pkgname=kernel-ivybridge
 pkgver=3.7.0
