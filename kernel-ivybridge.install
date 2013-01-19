@@ -1,0 +1,13 @@
+post_install() {
+  _depmod
+}
+
+post_upgrade() {
+  _depmod
+}
+
+_depmod() {
+  # installed by the kernel-ivybridge package, defines KERNEL_VERSION
+  . /usr/share/kernel-ivybridge/currver
+  depmod -a $KERNEL_VERSION
+}
