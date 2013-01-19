@@ -51,12 +51,12 @@ build() {
    sed -i '2iexit 0' scripts/depmod.sh
 
    # load configuration and build kernel + modules
-   cp ../kernelconfig ./.config
+   cp $startdir/kernelconfig ./.config
    make clean
    make gconfig
-   # # make silentoldconfig
+   # make silentoldconfig
    make || return 1
-   cp ./.config ../../kernelconfig.new
+   cp -vf $srcdir/linux-$_kernver/.config $startdir/kernelconfig.new
 }
 
 package() {
