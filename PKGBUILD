@@ -28,7 +28,7 @@ md5sums=(5323f3faadd051e83af605a63be5ea2e
          c3af8766b1bce7c8c3c6574a0f6b7a25
          9daa5f662145f91b25b91b9fbeb874d9
          c80954ae588d8c168a0b1ae9ffe84c0e
-         1b050cbc285fa8cbfd166d0274fb6397
+         8e97330025d6288879afcf514178811f
 )
 
 build() {
