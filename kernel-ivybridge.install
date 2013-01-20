@@ -1,13 +1,23 @@
 post_install() {
   _depmod
+  _info
 }
 
 post_upgrade() {
   _depmod
+  _info
 }
 
 _depmod() {
   # installed by the kernel-ivybridge package, defines KERNEL_VERSION
   . /usr/share/kernel-ivybridge/currver
   depmod -a $KERNEL_VERSION
+}
+
+_info() {
+echo "You should update the virtual box module:"
+echo " 1) Install kernel-ivybridge-headers"
+echo " 2) dkms install vboxhost/<virtualbox-host-source version>"
+echo "                 -k <kernel\'s version>/<architecture>"
+echo " 3) e.g.: dkms install vboxhost/4.2.6 -k 3.7.0-ivybridge/x86_64"
 }
